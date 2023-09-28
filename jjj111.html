@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Grid Layout в CSS3</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      .grid-container {
+        height: 100vh;
+        display: grid;
+        grid-template-areas:
+          "header header header"
+          "menu content sidebar"
+          "footer footer footer";
+        grid-template-columns: 1fr 600px 1fr;
+        grid-template-rows: 1fr 800px 1fr;
+      }
+      .header {
+        grid-area: header;
+        background-color: grey;
+      }
+      .content {
+        grid-area: content;
+        background-color: darkgray;
+      }
+      .menu {
+        grid-area: menu;
+        background-color: white;
+      }
+      .sidebar {
+        grid-area: sidebar;
+        background-color: black;
+      }
+      .footer {
+        grid-area: hfooter;
+        background-color: grey;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="header">Header</div>
+      <div class="content">Main content</div>
+      <div class="menu">Menu</div>
+      <div class="sidebar">SideBar</div>
+      <div class="footer">Footer</div>
+    </div>
+  </body>
+</html>
